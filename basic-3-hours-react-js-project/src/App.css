@@ -1,0 +1,45 @@
+#btn {
+  width: 100px;
+  cursor: pointer;
+  padding: 7px;
+  color: white;
+  background-color: coral;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.delete {
+  margin-left: 5px;
+}
+
+#title {
+  text-align: center;
+  color: coral;
+}
+
+label {
+  color: coral;
+}
+
+li {
+  height: 30px;
+}
+
+strong {
+  color: coral;
+}
+
+h1,
+h2 {
+  color: coral;
+}
+
+button {
+  padding: 5px;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
