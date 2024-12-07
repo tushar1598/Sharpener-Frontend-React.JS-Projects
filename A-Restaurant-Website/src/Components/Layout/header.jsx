@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./header.module.css";
+import CartContext from "../../store/CartContext";
 
 const Headers = (props) => {
+  const cartContext = useContext(CartContext);
+
+  let quantity = 0;
+  cartContext.items.forEach((item) => {
+    quantity = quantity + Number(item.quantity);
+  });
+
   return (
     <>
       <header className={styles.header}>
@@ -9,7 +17,7 @@ const Headers = (props) => {
         <button onClick={props.showCartHandler} className={styles.cartButton}>
           <span className={styles.cartIcon}>🛒</span>
           <span>Your Cart</span>
-          <span className={styles.cartBadge}>0</span>
+          <span className={styles.cartBadge}>{quantity}</span>
         </button>
       </header>
       <div className={styles["main-image"]}>

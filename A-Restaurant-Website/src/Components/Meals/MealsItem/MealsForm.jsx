@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./MealsForm.module.css";
 import Input from "../../UI/input";
+import CartContext from "../../../store/CartContext";
 
 const MealsForm = (props) => {
+  const cartContext = useContext(CartContext);
   const addItemToCart = (event) => {
     event.preventDefault();
+    // update the cartCtx.items
+    const quantity = document.getElementById("amount_" + props.id).value;
+    cartContext.addItem({ ...props.item, quantity: quantity });
   };
 
   return (
