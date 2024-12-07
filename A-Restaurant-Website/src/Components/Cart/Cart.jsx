@@ -5,13 +5,43 @@ import CartContext from "../../store/CartContext";
 
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
+
+  const increaseItem = (itemId) => {
+    cartContext.items.forEach((item) => {
+      if (item.id === itemId) {
+        cartContext.addItem({ ...item, quantity: 1 });
+      }
+    });
+  };
+  const decreaseItem = (itemId) => {
+    cartContext.items.forEach((item) => {
+      if (item.id === itemId) {
+        cartContext.removeItem(itemId);
+      }
+    });
+  };
+
   const cartItems = (
     <ul className={styles["cart-items"]}>
       {cartContext.items.map((item) => (
         <li key={item.id}>
-          <span>Name:</span> {item.name}
-          <span>Quantity:</span> {item.quantity}
-          <span>Price:</span> ${item.price}
+          <span>{item.name}</span>
+          <span>x{item.quantity}</span>
+          <span>${item.price}</span>
+          <div className="btnGroup">
+            <button
+              className={styles["button--decrease"]}
+              onClick={() => decreaseItem(item.id)}
+            >
+              -
+            </button>
+            <button
+              className={styles["button--increase"]}
+              onClick={() => increaseItem(item.id)}
+            >
+              +
+            </button>
+          </div>
         </li>
       ))}
     </ul>
