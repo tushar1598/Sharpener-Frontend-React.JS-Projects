@@ -1,11 +1,15 @@
-import "./App.css";
+import React from "react";
+import { BookmarkProvider } from "./context/BookmarkContext";
+import BookmarkList from "./components/BookmarksList";
+import BookmarkModal from "./UI/BookmarkModal";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Medium 3 hours React JS Project</h1>
-    </>
+    <BookmarkProvider>
+      <BookmarkList />
+      <BookmarkModal />
+    </BookmarkProvider>
   );
-}
+};
 
 export default App;
