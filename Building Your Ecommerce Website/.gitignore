@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+
 eslint.config.js
 package-lock.json
 package.json
