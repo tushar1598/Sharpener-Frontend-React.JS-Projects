@@ -1,7 +1,16 @@
+import React, { useContext } from "react";
 import "./Cart.css";
 import CartItem from "./CartItem";
+import CartContext from "../Store/CartContext";
 
 const Cart = (props) => {
+  const cartContext = useContext(CartContext);
+
+  let totalPrice = 0;
+  cartContext.items.map(
+    (item) => (totalPrice += Number(item.quantity) * Number(item.price))
+  );
+
   return (
     <section
       id="cart"
@@ -24,7 +33,7 @@ const Cart = (props) => {
         <span>
           <span className="total-title">Total</span>
         </span>
-        <span className="total-value">$0</span>
+        <span className="total-value">${totalPrice}</span>
       </div>
       <button className="purchase-btn" type="button">
         Purchase

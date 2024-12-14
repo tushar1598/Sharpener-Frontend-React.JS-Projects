@@ -1,35 +1,16 @@
+import { useContext } from "react";
 import "./CartItem.css";
+import CartContext from "../Store/CartContext";
 
 const CartItem = () => {
-  
-  const cartElements = [
-    {
-      title: "Colors",
-      price: 100,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-      quantity: 2,
-    },
-    {
-      title: "Black and white Colors",
-      price: 50,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-      quantity: 3,
-    },
-
-    {
-      title: "Yellow and Black Colors",
-      price: 70,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-      quantity: 1,
-    },
-  ];
+  const cartContext = useContext(CartContext);
+  const removeItemFromCart = (id) => {
+    cartContext.removeItem(id);
+  };
 
   return (
     <div>
-      {cartElements.map((item, i) => (
+      {cartContext.items.map((item, i) => (
         <div className="cart-items" key={i}>
           <div className="cart-item-name">
             <img src={item.imageUrl} alt=""></img>
@@ -38,7 +19,7 @@ const CartItem = () => {
           <div className="cart-items-price">{item.price}</div>
           <div className="cart-items-quantity">
             <input type="number" value={item.quantity} readOnly />
-            <button>Remove</button>
+            <button onClick={() => removeItemFromCart(item.id)}>Remove</button>
           </div>
         </div>
       ))}
