@@ -2,6 +2,8 @@ import React from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import CartContext from "../Store/CartContext";
+import { useNavigate } from "react-router-dom";
+import { routePath } from "../Routers/Router";
 
 const ProductList = () => {
   const productsArr = [
@@ -40,6 +42,12 @@ const ProductList = () => {
   ];
 
   let cartContext = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const productClickHandler = () => {
+    navigate(routePath.ProductPage);
+  };
+
   const addItemToCart = (item) => {
     cartContext.addItem(item);
   };
@@ -49,14 +57,18 @@ const ProductList = () => {
       <Container>
         <h1 className="text-center p-3">Products</h1>
         <Row className="justify-content-center">
-          {productsArr.map((product, index) => (
-            <Col className="md-4" key={index}>
+          {productsArr.map((product) => (
+            <Col className="md-4" key={product.id}>
               <Card className="mb-4" style={{ width: "18rem" }}>
                 <Card.Title className="text-center pt-3">
                   {product.title}
                 </Card.Title>
                 <Card.Body>
-                  <Card.Img variant="top" src={product.imageUrl} />
+                  <Card.Img
+                    onClick={productClickHandler}
+                    variant="top"
+                    src={product.imageUrl}
+                  />
                   <Card.Text className="pt-3">${product.price}</Card.Text>
                   <Button
                     variant="primary"
