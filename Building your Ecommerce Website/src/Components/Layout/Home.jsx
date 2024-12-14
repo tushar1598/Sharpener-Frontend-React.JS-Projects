@@ -1,4 +1,6 @@
 import "./Home.css";
+import React from "react";
+
 const Home = () => {
   const tours = [
     {

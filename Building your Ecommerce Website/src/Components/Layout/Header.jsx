@@ -22,15 +22,23 @@ const Header = () => {
         <div className="links">
           <Link to="/">Home</Link>
         </div>
+
         <div className="links">
           <Link to="/store">Store</Link>
         </div>
+
         <div className="links">
           <Link to="/about">About</Link>
         </div>
+
+        <div className="links">
+          <Link to="/contact-us">Contact Us</Link>
+        </div>
+
         <Button className="cart-holder" onClick={showCartHandler}>
           Cart ({totalAmount})
         </Button>
+
         {showCart && <Cart showCartHandler={showCartHandler}></Cart>}
       </header>
       <h1>The Generics</h1>
