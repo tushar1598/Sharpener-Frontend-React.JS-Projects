@@ -1,15 +1,20 @@
 import "./App.css";
-import Header from "./Components/Header";
-import ProductList from "./Components/Products/ProductLists";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Layout/Footer";
 import CartProvider from "./Components/Store/CartProvider";
+import Routers from "./Components/Routers/Router";
 
 function App() {
   return (
     <>
-      <CartProvider>
-        <Header />
-        <ProductList />
-      </CartProvider>
+      <Router>
+        <CartProvider>
+          <Header />
+          <Routers />
+          <Footer />
+        </CartProvider>
+      </Router>
     </>
   );
 }
