@@ -4,6 +4,7 @@ import { useContext } from "react";
 import CartContext from "../Store/CartContext";
 import { useNavigate } from "react-router-dom";
 import { routePath } from "../Routers/Router";
+import AuthContext from "../Store/AuthContaxt";
 
 const ProductList = () => {
   const productsArr = [
@@ -42,6 +43,7 @@ const ProductList = () => {
   ];
 
   let cartContext = useContext(CartContext);
+  let authContext = useContext(AuthContext);
   const navigate = useNavigate();
 
   const productClickHandler = () => {
@@ -72,7 +74,7 @@ const ProductList = () => {
                   <Card.Text className="pt-3">${product.price}</Card.Text>
                   <Button
                     variant="primary"
-                    onClick={() => addItemToCart(product)}
+                    onClick={() => addItemToCart(product, authContext.email)}
                   >
                     Add to Cart
                   </Button>

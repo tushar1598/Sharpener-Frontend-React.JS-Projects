@@ -56,7 +56,7 @@ const AuthForm = () => {
       .then((data) => {
         if (isLogin) {
           // If Login, proceed with authentication
-          authContext.login(data.idToken);
+          authContext.login(data.idToken, data.email);
           alert("User logged in successfully!");
           nevigate("/");
         } else {

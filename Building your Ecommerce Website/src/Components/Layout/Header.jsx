@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   let totalAmount = 0;
-  cartContext.items.map((item) => (totalAmount += item.quantity));
+  cartContext.items.map((item) => (totalAmount += item.items.quantity));
 
   return (
     <div className="navbar">

@@ -8,7 +8,8 @@ const Cart = (props) => {
 
   let totalPrice = 0;
   cartContext.items.map(
-    (item) => (totalPrice += Number(item.quantity) * Number(item.price))
+    (item) =>
+      (totalPrice += Number(item.items.quantity) * Number(item.items.price))
   );
 
   return (
