@@ -1,0 +1,27 @@
+#sign-in-form {
+  width: 40%;
+  height: 350px;
+  margin: 100px auto;
+  border: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#sign-in-form form {
+  width: 85%;
+  margin: 7% auto;
+}
+
+#sign-in-form button {
+  margin-top: 15px;
+  background-color: rgba(10, 47, 102, 0.596);
+  border: none;
+}
+
+#sign-in-form input {
+  background: none;
+  border: 1px solid rgb(139, 137, 137);
+}
+
+#forgot-password {
+  font-weight: 600;
+}

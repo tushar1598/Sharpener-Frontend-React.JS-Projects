@@ -1,0 +1,110 @@
+/* Order Container Styling */
+.order-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.order-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Order Cards Layout */
+.order-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Order Card Styling */
+.order-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.order-card strong {
+  font-weight: 600;
+}
+
+/* Order Items Styling */
+.order-items {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.order-item {
+  margin-bottom: 10px;
+}
+
+.order-item p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .order-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-container {
+    padding: 10px;
+  }
+
+  .order-card {
+    padding: 15px;
+  }
+
+  .order-card h3 {
+    font-size: 1rem;
+  }
+
+  .order-card p {
+    font-size: 0.9rem;
+  }
+}
+
+.order-parent {
+  display: flex;
+  gap: 100px;
+  width: 100%;
+}
+
+.order-item {
+  width: 60%;
+}
+
+.order-parent img {
+  width: 100px;
+  height: 100px;
+}

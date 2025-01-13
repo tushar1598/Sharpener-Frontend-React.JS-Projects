@@ -1,0 +1,42 @@
+/* #nav-head {
+  color: rgb(8, 6, 6);
+  text-decoration: none;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ef9e33, #c18df0, #e371eb);
+}
+
+.nav-link:hover {
+  color: rgb(247, 62, 62);
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-link.active-link {
+  color: hsl(209, 94%, 44%);
+}
+
+#profile-photo {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link.active-link {
+  color: #007bff;
+} */
