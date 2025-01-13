@@ -1,0 +1,155 @@
+.inbox-container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.inbox-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.email-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.email-item:hover {
+  background-color: #f9f9f9;
+}
+
+.selected {
+  background-color: #eaf4fc;
+}
+
+.email-radio {
+  margin-right: 10px;
+}
+
+.email-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-sender {
+  font-weight: bold;
+}
+
+.email-subject {
+  color: #100f0f;
+  font-weight: 700;
+  position: relative;
+  top: 7px;
+}
+
+.email-preview {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.email-time {
+  color: #aaa;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+/* New  */
+
+.inbox-container {
+  padding: 20px;
+}
+
+.inbox-header {
+  margin-bottom: 20px;
+}
+
+.email-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-item.selected {
+  background-color: #f0f0f0;
+}
+
+.email-details {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* blue dot */
+
+.inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.unread-counter {
+  font-size: 14px;
+  color: #555;
+}
+
+.blue-dot {
+  color: blue;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.email-info {
+  flex-grow: 1;
+}
+
+.email-time {
+  font-size: 12px;
+  color: #777;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}

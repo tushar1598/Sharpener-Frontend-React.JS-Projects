@@ -1,0 +1,92 @@
+/* General form styling */
+.mail-box-form {
+  max-height: 500px;
+  max-width: 600px; /* Restrict the form's width */
+  margin: 20px auto; /* Center the form */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add space between form elements */
+}
+
+/* Input fields styling */
+.mail-box-form input[type="email"],
+.mail-box-form input[type="text"],
+.mail-box-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Placeholder text color */
+.mail-box-form input::placeholder {
+  color: #aaa;
+}
+
+/* Submit button styling */
+.mail-box-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mail-box-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.editEditor {
+  min-height: 140px;
+}
+
+/* Editor styling */
+.editWrapper {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .mail-box-form {
+    padding: 15px;
+  }
+
+  .mail-box-form input[type="email"],
+  .mail-box-form input[type="text"],
+  .mail-box-form input[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .editWrapper {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mail-box-form {
+    padding: 10px;
+  }
+
+  .mail-box-form input[type="email"],
+  .mail-box-form input[type="text"],
+  .mail-box-form input[type="submit"] {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .editWrapper {
+    min-height: 120px;
+  }
+}
