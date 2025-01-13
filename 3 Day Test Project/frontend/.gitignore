@@ -12,11 +12,12 @@ dist
 dist-ssr
 *.local
 
+vite.config.js
 eslint.config.js
 package-lock.json
 package.json
 README.md
-vite.config.js
+
 
 # Editor directories and files
 .vscode/*
